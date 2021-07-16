@@ -1,0 +1,184 @@
+.header{
+    height: 7rem;
+    box-shadow: 0px 5px 6px 0px rgb(0 0 0 / 15%);
+    position: relative;
+    background-color: $color-background;
+    &__logo{
+        @include centerElement(50%, 50%)
+    }
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F2F2F2;
+    height: 50px;
+
+    &__city{
+        margin-left: 13px;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    &__icon{
+        width: 20px;
+        font-size: 1.6rem;
+    }
+}
+
+.booking{
+    background: $color-background;
+    font-size: 1.8rem;
+    padding: 40px 0;
+    &-box{
+        display: grid;
+        grid-template-rows: 1fr;
+        row-gap: 20px;
+        justify-content: center;
+        text-align: center;     
+    }
+    &button{
+        @extend %button;
+    } 
+}
+
+.operation{
+    padding-bottom: 4rem;
+    & a{
+        text-decoration: none;
+    }
+    &__title{
+        margin: 1.5rem;
+        font-size: 2rem;
+        text-align: center;
+        @media ( max-width: 800px) {
+            text-align: start;
+        }
+    } 
+    &__steps{
+        display: flex;
+        justify-content: center; 
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }       
+    &__step{
+        display: flex;
+        align-items: center;
+        background: $color-background-operation;
+        margin: 2rem 2.5rem;
+        border-radius: 2rem;
+        box-shadow: 0px 5px 6px 0px rgb(0 0 0 / 10%);
+        height: 5rem;
+        width: 100%;
+        &-link{
+            margin-right: 6rem;
+            @media ( max-width: 800px) {
+                margin-right: 3.5rem;
+            }
+        }
+    }
+    &__number{
+        background-color: $color-primary;
+        color: white;
+        position: absolute;
+        padding: 3px 8px 3px 8px;
+        border-radius: 10rem;
+        transform: translateX(-50%);
+    }
+    &__icon{
+        color: $color-icon;
+        margin: 0 2rem;
+        & i{
+            font-size: 1.5rem;
+        }
+    }
+    &__text{
+        color: black;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+}
+
+.restaurants{
+    background-color: $color-background;
+    padding: 1rem;
+    padding-bottom: 2rem;
+     &__cards{
+     display: grid;
+     grid-template-columns: repeat(1, 4fr );
+     grid-gap: 2rem;
+        @media (min-width: 800px) {
+            grid-template-columns: repeat(2, 2fr );
+        }  
+     }
+     &__title{
+         margin: 1.5rem;
+         font-size: 2rem;
+         @media (min-width: 800px) {
+         text-align: center;
+        }
+     }
+     & a{
+     text-decoration: none;
+     margin: 1.5rem 0.5rem;
+     }
+ }
+
+ .restaurant__card{
+    position: relative;
+    box-shadow: 0px 5px 6px 0px rgb(0 0 0 / 10%);
+    border-radius: 2rem;
+    &-new{
+    @include centerElement(15%, 75%)
+    }
+    &-new p{
+        background-color: #99e2d0;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+
+    }
+    &-img img{
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+
+    }
+    &-body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 7rem;
+
+    }
+    &-info{
+        color: black;
+        margin-left: 2rem; 
+    }
+    &-name{
+        font-size: 1.8rem;
+        font-weight: 700;
+   
+    }
+    &-city{
+        font-size: 1.7rem;
+        font-weight: 400;
+        
+    }
+    &-heart i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+        width: 5rem;
+        height: 5rem;
+        font-size: 3rem;
+        color: $color-secondary;
+   
+    }
+}
+
+

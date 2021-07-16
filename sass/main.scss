@@ -1,6 +1,17 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+
+
+
+
+@import "./bases/base";
+@import "./bases/typography";
+
+@import "./composants/button";
+@import "./composants/card";
+@import "./composants/footer";
+
+
+
+@import "./pages/index"
