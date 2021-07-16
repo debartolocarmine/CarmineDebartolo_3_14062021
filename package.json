@@ -1,0 +1,26 @@
+{
+  "name": "carminedebartolo_3_14062021",
+  "version": "1.0.0",
+  "description": "OhMyFood site OpenClassRooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debartolocarmine/CarmineDebartolo_3_14062021.git"
+  },
+  "keywords": [
+    "sass",
+    "html5",
+    "css3"
+  ],
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/debartolocarmine/CarmineDebartolo_3_14062021/issues"
+  },
+  "homepage": "https://github.com/debartolocarmine/CarmineDebartolo_3_14062021#readme"
+}
