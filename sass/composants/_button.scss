@@ -1,15 +1,20 @@
 %button{
-    opacity: 1;
     background: linear-gradient(180deg, $color-primary 0%, $color-secondary 100%);
     color: white;
     border-radius: 200px;
-    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 30%);
+    box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 30%);
     height: 45px;
     width: 200px;
     font-size: 1.5rem;
     border: none;
     cursor: pointer;
-
+    opacity: 1;
+    &:hover{
+        opacity: 0.8;
+        transition: 300ms;
+        cursor: pointer;
+        box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 60%);
+    }
 }
 
 .button {
