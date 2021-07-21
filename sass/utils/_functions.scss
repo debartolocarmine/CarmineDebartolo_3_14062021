@@ -1,7 +1,7 @@
 .menu__grid {
-    animation: staggeredDisplay-2 2s ease-out reverse;
+    animation: staggeredDisplay-2 3s ease-out reverse;
     .menu__grid__bloc{
-      animation: staggeredDisplay 700ms ease-out reverse;
+      animation: staggeredDisplay 1s ease-out reverse;
         
       @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
