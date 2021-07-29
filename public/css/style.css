@@ -118,7 +118,6 @@ h1 {
   z-index: 2;
   height: 100%;
   opacity: 0.8;
-  -webkit-animation: loader-section 2s linear;
   animation: loader-section 2s linear;
   visibility: hidden;
 }
@@ -160,7 +159,6 @@ h1 {
   border-top-color: #f3f3f3;
   border-bottom-color: #FF79DA;
   border-left-color: #9356DC;
-  -webkit-animation: loading-quart 1s linear infinite;
   animation: loading-quart 1s linear infinite;
 }
 
@@ -176,42 +174,15 @@ h1 {
   border-top-color: #FF79DA;
   border-bottom-color: #9356DC;
   border-left-color: #f3f3f3;
-  -webkit-animation: loading-quart 1s linear infinite;
   animation: loading-quart 1s linear infinite;
 }
 
-@-webkit-keyframes loading-quart {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
 @keyframes loading-quart {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes loader-section {
-  0% {
-    visibility: visible;
-    opacity: 0.8;
-  }
-  50% {
-    visibility: visible;
-    opacity: 0.7;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
   }
 }
 @keyframes loader-section {
@@ -582,8 +553,7 @@ h1 {
   transition: all 1s ease-in-out;
 }
 .menu__grid__case-checked-box span {
-  transition-duration: 0.8s;
-  transition-property: transform;
+  transition: 0.8s transform;
 }
 .menu__grid__case:hover .menu__grid__case-dish-and-price {
   width: 90%;
@@ -593,7 +563,6 @@ h1 {
 }
 .menu__grid__case:hover .menu__grid__case-checked-box span {
   transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
 }
 
 @media (max-width: 1100px) {
@@ -606,7 +575,7 @@ h1 {
     width: 100%;
   }
 }
-@-webkit-keyframes heart {
+@keyframes heart {
   0% {
     visibility: visible;
     opacity: 0;
