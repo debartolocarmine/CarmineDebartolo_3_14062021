@@ -25,9 +25,13 @@
 }
 
 @keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
   to {
     opacity: 1;
-    /* height: 30px !important; */
+    transform: translateY(-10px);
   }
 }
 * {
@@ -138,7 +142,6 @@ h1 {
   width: 20rem;
   height: 20rem;
   display: inline-block;
-  vertical-align: middle;
   position: relative;
 }
 
@@ -481,11 +484,13 @@ h1 {
 .menu__grid__bloc {
   display: flex;
   flex-direction: column;
+  width: 32%;
 }
 .menu__grid__title {
   font-weight: 300;
   text-transform: uppercase;
   font-size: 1.3rem;
+  margin-bottom: 2rem;
   position: relative;
 }
 .menu__grid__title::after {
@@ -502,11 +507,12 @@ h1 {
   display: flex;
   justify-content: space-between;
   opacity: 0;
-  animation: fade-in 300ms ease forwards;
+  animation: fade-in 600ms ease-in-out forwards;
   height: 6rem;
   margin: 20px 0;
   box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.1);
   border-radius: 1.5rem;
+  width: 100%;
 }
 .menu__grid__case-dish-and-price {
   display: flex;
@@ -515,7 +521,6 @@ h1 {
   padding-left: 10px;
   background-color: white;
   width: 100%;
-  transition: all 1s ease-in-out;
   overflow: hidden;
   border-radius: 1.5rem;
 }
@@ -539,7 +544,7 @@ h1 {
   font-weight: 600;
   font-size: 1.3rem;
   padding: 1rem 2.5rem;
-  transition: all 1s ease-in-out;
+  transition: all 1ms ease-in-out;
 }
 .menu__grid__case-checked-box {
   display: flex;
