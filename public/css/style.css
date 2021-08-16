@@ -46,7 +46,6 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f3f3f3;
 }
 
 h1 {
@@ -54,7 +53,7 @@ h1 {
   font-size: 2.9rem;
 }
 
-.bookingbutton, .button {
+.booking button, .button {
   background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
   color: white;
   border-radius: 200px;
@@ -66,7 +65,7 @@ h1 {
   cursor: pointer;
   opacity: 1;
 }
-.bookingbutton:hover, .button:hover {
+.booking button:hover, .button:hover {
   opacity: 0.8;
   transition: 300ms;
   cursor: pointer;
@@ -74,53 +73,61 @@ h1 {
 }
 
 .footer {
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: #353535;
 }
-@media (min-width: 1000px) {
-  .footer {
+.footer .fr-box {
+  padding: 4rem 0;
+  max-width: 128rem;
+  margin: 0 auto;
+}
+@media (min-width: 800px) {
+  .footer .fr-box {
     padding-top: 5rem;
-    padding-bottom: 20rem;
-    height: 20rem;
   }
 }
-.footer__links {
-  flex-direction: column;
-  justify-content: space-between;
-}
-.footer__title h2 {
+.footer .fr-box .fr-title h2 {
   margin-bottom: 1.5rem;
   font-family: "Shrikhand", cursive;
-  font-size: 2rem;
+  font-size: 2.3rem;
   letter-spacing: 0.2rem;
   font-weight: 500;
   color: white;
 }
-.footer__link {
+.footer .fr-box .fr-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+@media (max-width: 800px) {
+  .footer .fr-box .fr-links {
+    flex-direction: column;
+  }
+}
+.footer .fr-box .fr-links .fr-link {
   margin-bottom: 1.5rem;
   font-size: 1.7rem;
 }
-.footer__link i {
+.footer .fr-box .fr-links .fr-link i {
   margin-right: 0.5rem;
   color: white;
 }
-.footer__link a {
+.footer .fr-box .fr-links .fr-link a {
   color: white;
   text-decoration: none;
 }
 
 .loader-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ceaff3;
-  height: 25rem;
-  line-height: 95rem;
-  text-align: center;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   z-index: 2;
   height: 100%;
+  width: 100%;
   opacity: 0.8;
   animation: loader-section 2s linear;
   visibility: hidden;
@@ -222,12 +229,12 @@ h1 {
   background: #eaeaea;
   height: 5rem;
 }
-.location__city {
+.location .lt-city {
   margin-left: 1.3rem;
   font-weight: 500;
   font-size: 1.6rem;
 }
-.location__icon {
+.location .lt-icon {
   width: 20px;
   font-size: 1.6rem;
 }
@@ -235,79 +242,81 @@ h1 {
 .booking {
   background: #f3f3f3;
   font-size: 1.8rem;
+  padding: 1rem;
+  text-align: center;
+}
+.booking .bk-box {
   padding: 4rem 0;
 }
-.booking-box {
-  display: grid;
-  grid-template-rows: 1fr;
-  row-gap: 2rem;
-  justify-content: center;
-  text-align: center;
+.booking .bk-box .bk-text {
+  padding: 2.5rem 0;
 }
 .operation {
-  padding-bottom: 4rem;
+  padding: 1.5rem;
+  max-width: 128rem;
+  margin: 0 auto;
 }
-.operation a {
-  text-decoration: none;
+.operation .op-box {
+  padding: 4rem 0;
 }
-.operation__title {
-  margin: 1.5rem;
-  font-size: 2rem;
-  text-align: center;
+.operation .op-box .op-title {
+  margin: 0 0 2.5rem 0;
+  font-size: 2.5rem;
 }
-@media (max-width: 800px) {
-  .operation__title {
-    text-align: start;
+@media (min-width: 800px) {
+  .operation .op-box .op-title {
+    text-align: center;
   }
 }
-.operation__steps {
+.operation .op-box .op-steps {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
 }
 @media (max-width: 800px) {
-  .operation__steps {
-    display: flex;
+  .operation .op-box .op-steps {
     flex-direction: column;
+    align-items: flex-end;
   }
 }
-.operation__step {
+.operation .op-box .op-steps .op-step {
   display: flex;
   align-items: center;
   background: #f6f6f6;
-  margin: 2rem 2.5rem;
   border-radius: 2rem;
   box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.1);
   height: 5rem;
-  width: 100%;
+  padding-right: 2rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
 }
-.operation__step:hover {
+.operation .op-box .op-steps .op-step:hover {
   background: #f3ebfc;
 }
-.operation__step:hover .operation__icon {
+.operation .op-box .op-steps .op-step:hover .op-icon {
   color: #9356DC;
 }
-.operation__step-link {
-  margin-right: 6rem;
-}
 @media (max-width: 800px) {
-  .operation__step-link {
-    margin-right: 3.5rem;
+  .operation .op-box .op-steps .op-step {
+    width: calc(100% - 1.5rem);
   }
 }
-.operation__number {
+.operation .op-box .op-steps .op-step .op-number {
   background-color: #9356DC;
   color: white;
-  position: absolute;
+  position: relative;
   padding: 3px 8px 3px 8px;
   border-radius: 10rem;
   transform: translateX(-50%);
 }
-.operation__icon {
+.operation .op-box .op-steps .op-step .op-icon {
   color: #7E7E7E;
-  margin: 0 2rem;
+  margin: 0 1.3rem 0 0.5rem;
   font-size: 2rem;
+  width: 3rem;
+  text-align: center;
 }
-.operation__text {
+.operation .op-box .op-steps .op-step .op-text {
   color: black;
   font-size: 1.5rem;
   font-weight: 600;
@@ -315,10 +324,13 @@ h1 {
 
 .restaurants {
   background-color: #f3f3f3;
-  padding: 1rem;
+  padding: 1.5rem;
   padding-bottom: 2rem;
 }
-.restaurants__cards {
+.restaurants .rs-box {
+  padding: 4rem 0;
+}
+.restaurants .rs-box .rs-cards {
   display: grid;
   grid-template-columns: repeat(1, 4fr);
   grid-gap: 2rem;
@@ -326,50 +338,34 @@ h1 {
   margin: auto;
 }
 @media (min-width: 800px) {
-  .restaurants__cards {
+  .restaurants .rs-box .rs-cards {
     grid-template-columns: repeat(2, 2fr);
   }
 }
-.restaurants__title {
-  margin: 1.5rem;
-  font-size: 2rem;
-}
-@media (min-width: 800px) {
-  .restaurants__title {
-    text-align: center;
-  }
-}
-.restaurants a {
-  text-decoration: none;
-  margin: 1.5rem 0.5rem;
-}
-
-.restaurant__card {
+.restaurants .rs-box .rs-cards .rs-card {
   position: relative;
   box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 2rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
 }
-.restaurant__card-new {
+.restaurants .rs-box .rs-cards .rs-card .rs-card-new {
   position: absolute;
-  top: 15%;
-  left: 75%;
-  transform: translate(-50%, -50%);
+  right: 1.5rem;
+  top: 1.5rem;
 }
-.restaurant__card-new p {
+.restaurants .rs-box .rs-cards .rs-card .rs-card-new p {
   background-color: #99E2D0;
   color: #07674f95;
-  padding: 1rem 2rem;
-  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
-.restaurant__card-img img {
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
+.restaurants .rs-box .rs-cards .rs-card .rs-card-img img {
   width: 100%;
   height: 20rem;
   object-fit: cover;
 }
-.restaurant__card-body {
+.restaurants .rs-box .rs-cards .rs-card .rs-card-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -379,17 +375,29 @@ h1 {
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
 }
-.restaurant__card-info {
+.restaurants .rs-box .rs-cards .rs-card .rs-card-body .rs-card-info {
   color: black;
   margin-left: 2rem;
 }
-.restaurant__card-name {
+.restaurants .rs-box .rs-cards .rs-card .rs-card-body .rs-card-info .rs-card-name {
   font-size: 1.8rem;
   font-weight: 700;
 }
-.restaurant__card-city {
+.restaurants .rs-box .rs-cards .rs-card .rs-card-body .rs-card-info .rs-card-city {
   font-size: 1.7rem;
   font-weight: 400;
+}
+.restaurants .rs-box .rs-title {
+  margin: 0 0 2.5rem 0;
+  font-size: 2.5rem;
+}
+@media (min-width: 800px) {
+  .restaurants .rs-box .rs-title {
+    text-align: center;
+  }
+}
+.restaurants .rs-box a {
+  text-decoration: none;
 }
 
 .header {
@@ -486,19 +494,20 @@ h1 {
   flex-direction: column;
   width: 32%;
 }
-.menu__grid__title {
-  font-weight: 300;
+.menu__grid__title h3 {
+  font-weight: normal;
   text-transform: uppercase;
   font-size: 1.3rem;
   margin-bottom: 2rem;
   position: relative;
 }
-.menu__grid__title::after {
+.menu__grid__title h3::after {
   content: "";
   width: 40px;
   height: 4px;
   background: #99E2D0;
   position: absolute;
+  left: 0;
   bottom: -1rem;
 }
 
@@ -560,17 +569,14 @@ h1 {
 .menu__grid__case-checked-box span {
   transition: 0.8s transform;
 }
-.menu__grid__case:hover .menu__grid__case-dish-and-price {
-  width: 90%;
-}
 .menu__grid__case:hover .menu__grid__case-checked-box {
   width: 20%;
 }
 .menu__grid__case:hover .menu__grid__case-checked-box span {
-  transform: rotate(360deg);
+  animation: rotateChecker 600ms ease-in-out;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .menu__grid {
     display: flex;
     flex-direction: column;
@@ -592,6 +598,14 @@ h1 {
   100% {
     visibility: visible;
     opacity: 1;
+  }
+}
+@keyframes rotateChecker {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 

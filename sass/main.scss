@@ -1,19 +1,14 @@
+// Utils
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
-
-
-
-
+// Bases
 @import "./bases/base";
 @import "./bases/typography";
-
+// Composants
 @import "./composants/button";
-@import "./composants/card";
 @import "./composants/footer";
 @import "./composants/loader";
-
-
-
+// Pages
 @import "./pages/index";
 @import "./pages/menu";

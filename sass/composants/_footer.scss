@@ -1,37 +1,42 @@
 .footer{
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: $color-footer;
-    @media (min-width: 1000px) {
-      padding-top: 5rem;
-      padding-bottom: 20rem;  
-      height: 20rem;   
+    .fr-box{
+        padding: 4rem 0;
+        @media (min-width: 800px) {
+            padding-top: 5rem;
+        }
+        max-width: 128rem;
+        margin: 0 auto;
+        .fr-title{
+            h2{
+                margin-bottom: 1.5rem;
+                font-family: $font-primary;
+                font-size: 2.3rem;
+                letter-spacing: 0.2rem;
+                font-weight:500;
+                color: white;
+            }
+        }
+        .fr-links{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            @media (max-width: 800px) {
+                flex-direction: column;
+            }  
+            .fr-link{
+                margin-bottom: 1.5rem;
+                font-size: 1.7rem;
+                i{
+                    margin-right: 0.5rem;
+                    color: white;
+                }
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
     }
-
-    &__links{
-
-        flex-direction: column; 
-        justify-content: space-between;  
-        
-    }
-    &__title h2{
-        margin-bottom: 1.5rem;
-        font-family: $font-primary;
-        font-size: 2rem;
-        letter-spacing: 0.2rem;
-        font-weight:500;
-        color: white;
-    }
-    &__link{
-        margin-bottom: 1.5rem;
-        font-size: 1.7rem;
-    }
-    &__link i{
-        margin-right: 0.5rem;
-        color: white;
-    }
-    &__link a{
-        color: white;
-        text-decoration: none;
-    }
-
 }

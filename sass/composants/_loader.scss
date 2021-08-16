@@ -1,15 +1,14 @@
 .loader-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ceaff3;
-    height: 25rem;
-    line-height: 95rem; 
-    text-align: center;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     z-index: 2;
     height: 100%;
+    width: 100%;
     opacity: 0.8;
     animation:loader-section 2s linear;
     visibility: hidden;
