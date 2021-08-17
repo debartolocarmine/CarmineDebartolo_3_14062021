@@ -1,68 +1,62 @@
 .loader-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ceaff3;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-    opacity: 0.8;
-    animation:loader-section 2s linear;
-    visibility: hidden;
-}
-.loader-message{
-    font-family: $font-primary;
-    font-size: 5rem;
-    color: $color-primary;
-    text-decoration: underline;
-    z-index: 2;
-    @include centerElement(50%, 50%)
-}
-.loader{
-    width:20rem;
-    height: 20rem;
-    display: inline-block;
-    position: relative;
-}
-.loader-quart{
-    border-radius: 50rem;
-    border:0.4rem solid $color-tertiary;
-   
-}
-.loader-quart:after{
-    content: '';
-    position: absolute;
-    top: -0.6rem;
-    left: -0.6rem;
-    right: -0.6rem;
-    bottom: -0.6rem;
-    border-radius: 50rem;
-    border:0.4rem solid transparent;
-    border-top-color: $color-background;
-    border-bottom-color:$color-secondary;
-    border-left-color: $color-primary;
-    animation: loading-quart 1s linear infinite;
-}
-.loader-quart:before{
-    content: '';
-    position: absolute;
-    top: 0.2rem;
-    left: 0.2rem;
-    right: 0.2rem;
-    bottom: 0.2rem;
-    border-radius: 50rem;
-    border:0.4rem solid transparent;
-    border-top-color: $color-secondary;
-    border-bottom-color:$color-primary;
-    border-left-color: $color-background;
-    animation: loading-quart 1s linear infinite;
+  background-color: #ceaff3;
+  position: fixed;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  animation:ld-section 2s linear;
+  visibility: hidden;
+  .loader{
+      width:20rem;
+      height: 20rem;
+      display: inline-block;
+      position: relative;
+      @include centerElement(50%, 50%);
+      .ld-message{
+          font-family: $font-primary;
+          font-size: 5rem;
+          color: $color-primary;
+          text-decoration: underline;
+          z-index: 2;
+          @include centerElement(50%, 50%);
+      }
+  }
+  .ld-quart{
+      border-radius: 50rem;
+      border:0.4rem solid $color-tertiary;
+      &:after{
+          content: '';
+          position: absolute;
+          top: -0.6rem;
+          left: -0.6rem;
+          right: -0.6rem;
+          bottom: -0.6rem;
+          border-radius: 50rem;
+          border:0.4rem solid transparent;
+          border-top-color: $color-background;
+          border-bottom-color:$color-secondary;
+          border-left-color: $color-primary;
+          animation: ld-quart 1s linear infinite;
+      }
+      &:before{
+          content: '';
+          position: absolute;
+          top: 0.2rem;
+          left: 0.2rem;
+          right: 0.2rem;
+          bottom: 0.2rem;
+          border-radius: 50rem;
+          border:0.4rem solid transparent;
+          border-top-color: $color-secondary;
+          border-bottom-color:$color-primary;
+          border-left-color: $color-background;
+          animation: ld-quart 1s linear infinite;
+      }  
+  }
 }
 
-
-@keyframes loading-quart{
+@keyframes ld-quart{
     0%{
         transform: rotate(0deg);
     }
@@ -71,7 +65,7 @@
     }
 }
 
-@keyframes loader-section{
+@keyframes ld-section{
     0%{
         visibility: visible;
         opacity: 0.8; 

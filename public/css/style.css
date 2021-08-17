@@ -118,22 +118,26 @@ h1 {
 }
 
 .loader-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #ceaff3;
   position: fixed;
-  top: 0;
-  left: 0;
   z-index: 2;
   height: 100%;
   width: 100%;
   opacity: 0.8;
-  animation: loader-section 2s linear;
+  animation: ld-section 2s linear;
   visibility: hidden;
 }
-
-.loader-message {
+.loader-section .loader {
+  width: 20rem;
+  height: 20rem;
+  display: inline-block;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader-section .loader .ld-message {
   font-family: "Shrikhand", cursive;
   font-size: 5rem;
   color: #9356DC;
@@ -144,20 +148,11 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.loader {
-  width: 20rem;
-  height: 20rem;
-  display: inline-block;
-  position: relative;
-}
-
-.loader-quart {
+.loader-section .ld-quart {
   border-radius: 50rem;
   border: 0.4rem solid #99E2D0;
 }
-
-.loader-quart:after {
+.loader-section .ld-quart:after {
   content: "";
   position: absolute;
   top: -0.6rem;
@@ -169,10 +164,9 @@ h1 {
   border-top-color: #f3f3f3;
   border-bottom-color: #FF79DA;
   border-left-color: #9356DC;
-  animation: loading-quart 1s linear infinite;
+  animation: ld-quart 1s linear infinite;
 }
-
-.loader-quart:before {
+.loader-section .ld-quart:before {
   content: "";
   position: absolute;
   top: 0.2rem;
@@ -184,10 +178,10 @@ h1 {
   border-top-color: #FF79DA;
   border-bottom-color: #9356DC;
   border-left-color: #f3f3f3;
-  animation: loading-quart 1s linear infinite;
+  animation: ld-quart 1s linear infinite;
 }
 
-@keyframes loading-quart {
+@keyframes ld-quart {
   0% {
     transform: rotate(0deg);
   }
@@ -195,7 +189,7 @@ h1 {
     transform: rotate(360deg);
   }
 }
-@keyframes loader-section {
+@keyframes ld-section {
   0% {
     visibility: visible;
     opacity: 0.8;
