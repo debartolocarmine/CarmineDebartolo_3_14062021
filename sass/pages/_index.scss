@@ -46,15 +46,12 @@
     padding: 1.5rem;
     max-width: 128rem;
     margin: 0 auto;
-    // padding-bottom: 4rem;
-    // display: flex;
-    // justify-content: center;
     .op-box{
         padding: 4rem 0;
         .op-title{
             margin: 0 0 2.5rem 0;
             font-size: 2.5rem;
-            @media ( min-width: 800px) {
+            @media ( min-width: 768px) {
                 text-align: center;
             }
         }
@@ -62,9 +59,14 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
-            @media (max-width: 800px) {
+            @media (max-width: 768px) {
                 flex-direction: column;
                 align-items: flex-end;
+            }
+            @media (min-width:768px) and ( max-width: 992px) {
+                flex-direction: column;
+                width: 80%;
+                margin: auto;
             }
             .op-step {
                 display: flex;
@@ -76,13 +78,23 @@
                 padding-right: 2rem;
                 margin-bottom: 1.5rem;
                 text-decoration: none;
+                width: 28%;
+                @media (min-width:768px) and ( max-width: 992px) {
+                    width: 100%;
+                    p.op-text{
+                      text-align: center;
+                      width: 80%;
+                     
+                    }                  
+                }
+
                 &:hover{
                     background: #f3ebfc;
                     .op-icon{
                         color: $color-primary;
                     }
                 }
-                @media (max-width: 800px) {
+                @media (max-width: 768px) {
                     width: calc(100% - 1.5rem);
                 }
                 .op-number{
@@ -99,6 +111,7 @@
                     font-size: 2rem;
                     width: 3rem;
                     text-align: center;
+
                 }
                 .op-text{
                     color: black;
@@ -173,7 +186,7 @@
         .rs-title{
             margin: 0 0 2.5rem 0;
             font-size: 2.5rem;
-            @media (min-width: 800px) {
+            @media (min-width: 768px) {
                 text-align: center;
             }
         }
